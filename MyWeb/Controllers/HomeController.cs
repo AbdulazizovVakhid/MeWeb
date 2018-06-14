@@ -9,7 +9,7 @@ namespace MyWeb.Controllers
 {
     public class HomeController : Controller
     {
-        private BazaPeoleDb db = new BazaPeopleDb();
+        //private BazaPeoleDb db = new BazaPeopleDb();
         public ActionResult Index()
         {
             return View();
@@ -26,6 +26,16 @@ namespace MyWeb.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult TakeCredit()
+        {
+            return View();
+        }
+
+        public ActionResult Send ()
+        {
             return View();
         }
     }

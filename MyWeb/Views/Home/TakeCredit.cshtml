@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Взять кредит ";
+
+}
+
+@using (Html.BeginForm("Buy", "Home", FormMethod.Post))
+{
+    <input type="hidden" value="@ViewBag.BookId" name="BookId" />
+    <p>Введите свои данные: </p>
+    <p>Введите имя</p>
+    @Html.TextBox("Name", "")
+    <p>Введите фамилию</p>
+    @Html.TextBox("surname", "")
+    <p>Введие отчество </p>
+    @Html.TextBox("patronymic", " ")
+    <p>Введие Email</p>
+    @Html.TextBox("Email", " ")
+    <p>Введие сумму желаемого кредита</p>
+    @Html.TextBox("LoanAmount", " ")
+    <p>Введие номер телефона</p>
+    @Html.TextBox("NumberPhone", " ")
+    <p>@Html.ActionLink("Взять Кредит", "Send", null, new { @class = "btn btn-primary btn-lg" })</p>
+
+}

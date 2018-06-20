@@ -10,7 +10,7 @@ namespace MyWeb.Controllers
 {
     public class HomeController : Controller
     {
-        //private AppDbContext db = new AppDbContext();
+        private AppDbContext db = new AppDbContext();
 
         // People peop = db.People.FerstOrDefault(q => q.Name == Name);
 
@@ -39,6 +39,19 @@ namespace MyWeb.Controllers
         public ActionResult TakeCredit()
         {
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult TakeCredit([Bind(Include = "Name, Surname,Patronymic,Email,LoanAmount,NumberPhone")] People person)
+        {
+            if (ModelState.IsValid)
+            {
+               // db.People.(person);
+                db.SaveChanges();
+                return RedirectToAction("Send");
+            }
+
+            return View(person);
         }
 
         public ActionResult Send ()

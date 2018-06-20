@@ -10,23 +10,23 @@ namespace MyWeb
     {
 
         [Required]
-        [Display(Name = "Например Иван")]
+        [Display(Name = "Имя")]
         public string Name { get; set; }
 
         [Required]
-        [Display(Name = "Наапример Иванов")]
+        [Display(Name = "Фамилия")]
         public string Surname { get; set; }
         [Required]
-        [Display(Name = "Наапример Иванович")]
+        [Display(Name = "Отчество")]
         public string Patronymic { get; set; }
         [Required]
-        [Display(Name = "Например ivanIvanov@mail.ru")]
+        [Display(Name = "Mail")]
         public string Email { get; set; }
         [Required]
         [Display(Name = "Сумму займа в рублях")]
         public string LoanAmount { get; set; }
         [Required]
-        [Display(Name = "Наапример +7(920)-345-37-41")]
+        [Display(Name = "Номер телефона")]
         public string NumberPhone { get; set; }
         public override string ToString()
         {
